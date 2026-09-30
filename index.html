@@ -1,36 +1,115 @@
 <!doctype html>
 <html lang="es-AR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#061f33" />
-    <meta name="color-scheme" content="light" />
-    <meta name="description" content="Piazza di Mare — confitería, café, pastelería y gastronomía frente al mar en Mar del Plata." />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_AR" />
-    <meta property="og:title" content="Piazza di Mare · Mar del Plata" />
-    <meta property="og:description" content="Un café frente al mar. Gastronomía, encuentros y atardeceres en Mar del Plata." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <title>Piazza di Mare · Café frente al mar en Mar del Plata</title>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "CafeOrCoffeeShop",
-        "name": "Piazza di Mare",
-        "description": "Confitería, café, pastelería y gastronomía frente al mar en Mar del Plata.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Mar del Plata",
-          "addressRegion": "Buenos Aires",
-          "addressCountry": "AR"
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#061f33">
+  <meta name="description" content="Piazza di Mare — confitería, café, pastelería y gastronomía frente al mar en Mar del Plata.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Piazza di Mare · Mar del Plata">
+  <meta property="og:description" content="Un café frente al mar. Gastronomía, encuentros y atardeceres en Mar del Plata.">
+  <title>Piazza di Mare · Café frente al mar en Mar del Plata</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<main>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Piazza di Mare">
+      <strong>Piazza di Mare</strong>
+      <small>Confitería · Café · Mar del Plata</small>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a><a href="#experiencia">La experiencia</a><a href="#propuesta">Nuestra propuesta</a><a href="#arquitectura">Galería</a><a href="#eventos">Eventos</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a class="reserve-pill" href="#contacto">Reservar</a>
+    <button class="menu-button" id="menuButton" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow light">Mar del Plata · Argentina</p>
+      <h1>Un café<br>frente al mar.</h1>
+      <p class="hero-tagline">Buenos momentos, siempre saben mejor acá.</p>
+      <a class="cta gold" href="#experiencia">Viví la experiencia <span>→</span></a>
+    </div>
+    <div class="hero-location">⌖ Mar del Plata · Costa Atlántica</div>
+  </section>
+
+  <section class="experience-section" id="experiencia">
+    <div class="experience-intro">
+      <p class="eyebrow">La experiencia</p>
+      <h2>Más que un café,<br>una forma de vivir<br>Mar del Plata.</h2>
+      <p>Piazza di Mare es un punto de encuentro entre la buena gastronomía, el mar y los mejores momentos del día. Un lugar donde cada detalle invita a disfrutar.</p>
+      <a class="cta gold" href="#arquitectura">Conocé nuestra historia <span>→</span></a>
+    </div>
+    <div class="experience-cards">
+      <article class="experience-card"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=88" alt="Café de especialidad"><div><div class="card-icon">☕</div><h3>Sabores que inspiran</h3><p>Café de especialidad, pastelería artesanal y una carta pensada para cada momento.</p></div></article>
+      <article class="experience-card"><img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=88" alt="Experiencia frente al mar"><div><div class="card-icon">☀</div><h3>Un entorno único</h3><p>La inmensidad del mar como escenario, en un espacio diseñado para disfrutar sin apuro.</p></div></article>
+      <article class="experience-card"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1000&q=88" alt="Encuentros"><div><div class="card-icon">◇</div><h3>Momentos que conectan</h3><p>Encuentros, charlas, celebraciones y atardeceres que se vuelven inolvidables.</p></div></article>
+    </div>
+  </section>
+
+  <section class="proposal" id="propuesta">
+    <div class="proposal-copy">
+      <p class="eyebrow light">Nuestra propuesta</p>
+      <h2>Gastronomía<br>en armonía con el mar.</h2>
+      <p>Una carta que combina tradición y contemporaneidad: café de especialidad, pastelería, productos frescos y opciones para acompañar cada momento del día.</p>
+      <a class="cta gold" href="#contacto">Descubrir la propuesta <span>→</span></a>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-card"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=88" alt="Desayunos"><span></span><h3>Desayunos</h3><p>El mejor comienzo.</p></article>
+      <article class="menu-card"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=88" alt="Pastelería"><span></span><h3>Meriendas</h3><p>Clásicos y creaciones.</p></article>
+      <article class="menu-card"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=88" alt="Almuerzos"><span></span><h3>Almuerzos</h3><p>Sabores del mar y la tierra.</p></article>
+      <article class="menu-card"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1000&q=88" alt="Atardeceres"><span></span><h3>Atardeceres</h3><p>Un ritual en la costa.</p></article>
+    </div>
+  </section>
+
+  <section class="architecture" id="arquitectura">
+    <div class="architecture-photo"></div>
+    <div class="architecture-copy">
+      <p class="eyebrow">Arquitectura & paisaje</p>
+      <h2>Un diseño que enmarca<br>lo extraordinario.</h2>
+      <p>Espacios luminosos, líneas modernas y una conexión natural con el entorno. Piazza di Mare integra arquitectura, paisaje y gastronomía en perfecta armonía.</p>
+      <div class="features"><div><span>✦</span><b>Espacios abiertos</b></div><div><span>≈</span><b>Vistas privilegiadas</b></div><div><span>☀</span><b>Luz natural todo el día</b></div></div>
+    </div>
+  </section>
+
+  <section class="moment">
+    <div class="moment-image"></div>
+    <div class="moment-copy">
+      <p class="eyebrow">Desayunos, meriendas y atardeceres</p>
+      <h2>Cada momento<br>tiene su sabor.</h2>
+      <p>Desde un desayuno frente al mar hasta una copa cuando baja el sol, Piazza di Mare siempre invita a quedarse un poco más.</p>
+      <a class="cta gold" href="#contacto">Reservá tu mesa <span>→</span></a>
+    </div>
+  </section>
+
+  <section class="events" id="eventos">
+    <div class="events-overlay"></div>
+    <div class="events-copy">
+      <p class="eyebrow light">Encuentros & eventos</p>
+      <h2>Un escenario para<br>momentos especiales.</h2>
+      <p>Celebraciones íntimas, encuentros corporativos, presentaciones de marca y experiencias privadas con el Atlántico como telón de fondo.</p>
+      <div class="event-tags"><span>▣ Eventos privados</span><span>◇ Encuentros & grupos</span><span>◌ Atardeceres especiales</span></div>
+      <a class="cta outline-light" href="#contacto">Consultar experiencias <span>→</span></a>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div><p class="eyebrow light">Contacto</p><h2>Te esperamos<br>en la costa.</h2></div>
+    <div class="contact-data"><span>⌖ Mar del Plata, Buenos Aires</span><span>◷ Próximamente</span><span>☕ Café · Pastelería · Gastronomía</span><span>◌ Desayunos · Meriendas · Atardeceres</span></div>
+    <a class="cta gold" href="mailto:hola@piazzadimare.com.ar">Quiero saber más <span>→</span></a>
+  </section>
+
+  <footer>
+    <div class="footer-brand"><strong>Piazza di Mare</strong><small>Confitería · Café · Mar del Plata</small></div>
+    <span>Mar del Plata siempre es una buena idea.</span>
+    <a href="#inicio" aria-label="Volver arriba">↑</a>
+  </footer>
+</main>
+<script src="/site.js"></script>
+</body>
 </html>
