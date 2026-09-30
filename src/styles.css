@@ -98,6 +98,22 @@ button{font:inherit}
 .moment-copy h2{font-size:clamp(52px,5.2vw,80px);line-height:.9}
 .moment-copy>p:not(.eyebrow){color:#697377;line-height:1.7;font-size:14px;max-width:530px}
 
+.events{
+  position:relative;min-height:560px;display:flex;align-items:center;color:white;overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(5,20,33,.86) 0%,rgba(5,20,33,.55) 48%,rgba(5,20,33,.2) 100%),
+    url("https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=2000&q=88") center/cover no-repeat;
+}
+.events-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,14,24,.08),rgba(3,14,24,.25))}
+.events-copy{position:relative;z-index:2;padding:80px 5vw;max-width:760px}
+.events-copy h2{font-family:"Cormorant Garamond",serif;font-size:clamp(52px,5.8vw,86px);font-weight:400;line-height:.9;letter-spacing:-.035em;margin:0}
+.events-copy>p:not(.eyebrow){color:#d3dde1;line-height:1.75;font-size:14px;max-width:590px;margin:24px 0}
+.event-tags{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+.event-tags span{display:flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.24);padding:10px 12px;text-transform:uppercase;letter-spacing:.1em;font-size:8px;background:rgba(5,23,38,.28);backdrop-filter:blur(6px)}
+.event-tags svg{color:var(--gold-2)}
+.outline-light{border:1px solid rgba(255,255,255,.55);color:white}
+.outline-light:hover{background:white;color:var(--navy)}
+
 .contact{background:var(--navy);color:white;padding:54px 5vw;display:grid;grid-template-columns:1fr 1.4fr auto;gap:5vw;align-items:center}
 .contact h2{font-size:clamp(46px,4.7vw,72px);line-height:.9}
 .contact-data{display:grid;grid-template-columns:1fr 1fr;gap:18px;color:#b7c4ca;font-size:11px}
@@ -114,7 +130,7 @@ footer>a{justify-self:end;color:var(--gold)}
   .nav,.reserve-pill{display:none}
   .menu-button{display:block;justify-self:end}
   .nav-open{display:flex;position:absolute;top:82px;right:24px;flex-direction:column;align-items:flex-start;background:rgba(5,24,39,.97);padding:28px;min-width:220px}
-  .experience-section,.proposal,.architecture,.moment,.contact{grid-template-columns:1fr}
+  .experience-section,.proposal,.architecture,.moment,.contact{grid-template-columns:1fr}\n  .events{min-height:500px}
   .experience-cards{margin-top:10px}
   .architecture-photo{min-height:500px}
   .contact-data{grid-template-columns:1fr 1fr}
@@ -138,7 +154,7 @@ footer>a{justify-self:end;color:var(--gold)}
   .architecture-copy,.moment-copy{padding:70px 22px}
   .features{grid-template-columns:1fr}
   .moment-image{min-height:390px}
-  .contact{padding:60px 22px}
+  .events-copy{padding:70px 22px}\n  .event-tags{flex-direction:column;align-items:flex-start}\n  .contact{padding:60px 22px}
   .contact-data{grid-template-columns:1fr}
   footer{padding:28px 22px}
 }
