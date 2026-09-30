@@ -40,7 +40,7 @@ button{font:inherit}
   min-height:100svh;position:relative;display:flex;align-items:center;color:white;overflow:hidden;
   background:
     linear-gradient(90deg,rgba(3,15,28,.62) 0%,rgba(3,15,28,.28) 36%,rgba(3,15,28,.1) 65%,rgba(3,15,28,.25) 100%),
-    url("https://images.unsplash.com/photo-1774938101681-543593721cd3?auto=format&fit=crop&fm=jpg&q=90&w=2400") center/cover no-repeat;
+    url("/piazza-hero.webp") center/cover no-repeat;
 }
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,8,17,.24),transparent 45%,rgba(0,8,17,.38))}
 .hero-content{position:relative;z-index:2;padding:18vh 5vw 8vh;max-width:760px}
