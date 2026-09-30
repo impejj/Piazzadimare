@@ -1,0 +1,8 @@
+Options -Indexes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(?:src|\.github)(?:/|$) - [F,L]
+</IfModule>
+<FilesMatch "^(?:package(?:-lock)?\.json|tsconfig\.json|vite\.config\.ts|README\.md|HOSTINGER\.md)$">
+Require all denied
+</FilesMatch>
