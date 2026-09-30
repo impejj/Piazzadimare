@@ -1,51 +1,61 @@
 import {
-  ArrowDown,
   ArrowRight,
+  Clock3,
   Coffee,
   Croissant,
-  GlassWater,
   Instagram,
   MapPin,
   Menu,
   Sparkles,
-  Sunset,
-  UtensilsCrossed,
+  Sun,
+  Users,
   Waves,
   Wine,
 } from "lucide-react";
 import { useState } from "react";
 
-const services = [
+const experienceCards = [
   {
     icon: Coffee,
-    eyebrow: "Café de especialidad",
-    title: "El ritual de cada día",
-    text: "Espresso, filtrados, clásicos italianos y una carta pensada para acompañar la mañana frente al Atlántico.",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=88",
+    title: "Sabores que inspiran",
+    text: "Café de especialidad, pastelería artesanal y una carta pensada para cada momento.",
   },
   {
-    icon: Croissant,
-    eyebrow: "Pastelería & panadería",
-    title: "Hecho para tentar",
-    text: "Viennoiserie, tortas, laminados, dulces y salados preparados para convertir cualquier pausa en un plan.",
+    icon: Sun,
+    image: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=88",
+    title: "Un entorno único",
+    text: "La inmensidad del mar como escenario, en un espacio diseñado para disfrutar sin apuro.",
   },
   {
-    icon: UtensilsCrossed,
-    eyebrow: "Desayunos & meriendas",
-    title: "Más tiempo en la mesa",
-    text: "Opciones frescas, abundantes y contemporáneas para compartir, trabajar, encontrarse o simplemente mirar el mar.",
-  },
-  {
-    icon: Wine,
-    eyebrow: "Atardeceres",
-    title: "Cuando cambia la luz",
-    text: "Aperitivos, vinos, cócteles y pequeños platos para llevar Piazza di Mare desde el café hasta la primera noche.",
+    icon: Users,
+    image: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1000&q=88",
+    title: "Momentos que conectan",
+    text: "Encuentros, charlas, celebraciones y atardeceres que se vuelven inolvidables.",
   },
 ];
 
-const experiences = [
-  ["Salón vidriado", "Luz natural, vistas abiertas y una arquitectura que hace del mar parte del interior."],
-  ["Terraza marítima", "Mesas al aire libre para desayunos largos, tardes de sol y puestas de sol."],
-  ["Encuentros & eventos", "Un escenario flexible para celebraciones íntimas, marcas y experiencias privadas."],
+const menuCards = [
+  {
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=88",
+    title: "Desayunos",
+    text: "El mejor comienzo.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=88",
+    title: "Meriendas",
+    text: "Clásicos y creaciones.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=88",
+    title: "Almuerzos",
+    text: "Sabores del mar y la tierra.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1000&q=88",
+    title: "Atardeceres",
+    text: "Un ritual en la costa.",
+  },
 ];
 
 export default function App() {
@@ -55,139 +65,135 @@ export default function App() {
     <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Piazza di Mare">
-          <span className="brand-mark"><Waves size={23} strokeWidth={1.5} /></span>
-          <span>
-            <strong>Piazza</strong>
-            <small>di Mare</small>
-          </span>
+          <strong>Piazza di Mare</strong>
+          <small>Confitería · Café · Mar del Plata</small>
         </a>
 
-        <nav className={open ? "nav nav-open" : "nav"} aria-label="Principal">
-          <a href="#experiencia" onClick={() => setOpen(false)}>Experiencia</a>
-          <a href="#carta" onClick={() => setOpen(false)}>Carta</a>
-          <a href="#espacio" onClick={() => setOpen(false)}>El espacio</a>
-          <a href="#contacto" onClick={() => setOpen(false)}>Contacto</a>
+        <nav className={open ? "nav nav-open" : "nav"}>
+          <a href="#inicio">Inicio</a>
+          <a href="#experiencia">La experiencia</a>
+          <a href="#propuesta">Nuestra propuesta</a>
+          <a href="#arquitectura">Galería</a>
+          <a href="#contacto">Contacto</a>
         </nav>
 
-        <a className="header-cta" href="#contacto">Visitanos <ArrowRight size={16} /></a>
+        <a className="reserve-pill" href="#contacto">Reservar</a>
         <button className="menu-button" onClick={() => setOpen(!open)} aria-label="Abrir menú">
           <Menu size={24} />
         </button>
       </header>
 
       <section className="hero" id="inicio">
-        <div className="hero-shade" />
-        <div className="hero-grain" />
+        <div className="hero-overlay" />
         <div className="hero-content">
-          <p className="kicker"><MapPin size={15} /> Mar del Plata · Argentina</p>
-          <h1>Un café<br /><em>frente al mar.</em></h1>
-          <p className="hero-copy">
-            Vidrio, luz, café y horizonte. Piazza di Mare nace para convertir cada encuentro
-            en una experiencia costera inolvidable.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-light" href="#carta">Descubrir Piazza <ArrowRight size={18} /></a>
-            <a className="text-link" href="#espacio">Conocer el espacio <ArrowDown size={17} /></a>
-          </div>
+          <p className="eyebrow light">Mar del Plata · Argentina</p>
+          <h1>Un café<br />frente al mar.</h1>
+          <p className="hero-tagline">Buenos momentos, siempre saben mejor acá.</p>
+          <a className="cta gold" href="#experiencia">Viví la experiencia <ArrowRight size={17} /></a>
         </div>
-        <div className="hero-side-note">
-          <span>38° 00′ S</span>
-          <span>Atlántico argentino</span>
-        </div>
+        <div className="hero-location"><MapPin size={16} /> Mar del Plata · Costa Atlántica</div>
       </section>
 
-      <section className="manifesto" id="experiencia">
-        <div>
-          <p className="section-label">La experiencia</p>
-          <h2>Una confitería que se siente como estar <em>sobre el mar.</em></h2>
-        </div>
-        <div className="manifesto-copy">
+      <section className="experience-section" id="experiencia">
+        <div className="experience-intro">
+          <p className="eyebrow">La experiencia</p>
+          <h2>Más que un café,<br />una forma de vivir<br />Mar del Plata.</h2>
           <p>
-            Piazza di Mare combina hospitalidad clásica y diseño contemporáneo. La arquitectura
-            privilegia el vidrio, la transparencia y las visuales abiertas para que el océano sea
-            protagonista durante todo el día.
+            Piazza di Mare es un punto de encuentro entre la buena gastronomía,
+            el mar y los mejores momentos del día. Un lugar donde cada detalle
+            invita a disfrutar.
           </p>
-          <p>
-            Un lugar para el primer café, una reunión, una merienda, una sobremesa larga o una copa
-            cuando baja el sol.
-          </p>
+          <a className="cta gold" href="#arquitectura">Conocé nuestra historia <ArrowRight size={17} /></a>
         </div>
-      </section>
 
-      <section className="sea-window" id="espacio">
-        <div className="sea-window-image" />
-        <div className="sea-window-card">
-          <p className="section-label">Arquitectura & paisaje</p>
-          <h3>El horizonte entra al salón.</h3>
-          <p>
-            Materiales nobles, reflejos, vegetación costera y una envolvente transparente diseñada
-            para amplificar la luz de Mar del Plata.
-          </p>
-          <div className="micro-stats">
-            <span><Sparkles size={18} /> diseño contemporáneo</span>
-            <span><Sunset size={18} /> vista abierta</span>
-            <span><GlassWater size={18} /> interior + terraza</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="services" id="carta">
-        <div className="section-heading">
-          <p className="section-label">Nuestra propuesta</p>
-          <h2>Del primer espresso<br />al último brindis.</h2>
-        </div>
-        <div className="service-grid">
-          {services.map(({ icon: Icon, eyebrow, title, text }) => (
-            <article className="service-card" key={title}>
-              <div className="service-icon"><Icon size={25} strokeWidth={1.5} /></div>
-              <p>{eyebrow}</p>
-              <h3>{title}</h3>
-              <span>{text}</span>
+        <div className="experience-cards">
+          {experienceCards.map(({ icon: Icon, image, title, text }) => (
+            <article className="experience-card" key={title}>
+              <img src={image} alt="" />
+              <div>
+                <Icon size={21} strokeWidth={1.5} />
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="experience-list">
-        <div className="experience-photo" />
-        <div className="experience-content">
-          <p className="section-label">Piazza, todo el día</p>
-          <h2>Un espacio.<br />Muchas formas de vivirlo.</h2>
-          <div className="experience-items">
-            {experiences.map(([title, text], index) => (
-              <div className="experience-item" key={title}>
-                <b>{String(index + 1).padStart(2, "0")}</b>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
-              </div>
-            ))}
+      <section className="proposal" id="propuesta">
+        <div className="proposal-copy">
+          <p className="eyebrow light">Nuestra propuesta</p>
+          <h2>Gastronomía<br />en armonía con el mar.</h2>
+          <p>
+            Una carta que combina tradición y contemporaneidad: café de especialidad,
+            pastelería, productos frescos y opciones para acompañar cada momento del día.
+          </p>
+          <a className="cta gold" href="#contacto">Descubrir la propuesta <ArrowRight size={17} /></a>
+        </div>
+
+        <div className="menu-grid">
+          {menuCards.map((item) => (
+            <article className="menu-card" key={item.title}>
+              <img src={item.image} alt="" />
+              <span />
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="architecture" id="arquitectura">
+        <div className="architecture-photo" />
+        <div className="architecture-copy">
+          <p className="eyebrow">Arquitectura & paisaje</p>
+          <h2>Un diseño que enmarca<br />lo extraordinario.</h2>
+          <p>
+            Espacios luminosos, líneas modernas y una conexión natural con el entorno.
+            Piazza di Mare integra arquitectura, paisaje y gastronomía en perfecta armonía.
+          </p>
+          <div className="features">
+            <div><Sparkles size={22} /><b>Espacios abiertos</b></div>
+            <div><Waves size={22} /><b>Vistas privilegiadas</b></div>
+            <div><Sun size={22} /><b>Luz natural todo el día</b></div>
           </div>
         </div>
       </section>
 
-      <section className="closing">
-        <div>
-          <p className="section-label light">Próximamente · Mar del Plata</p>
-          <h2>Nos vemos<br /><em>frente al mar.</em></h2>
-        </div>
-        <div className="closing-copy">
-          <p>Estamos preparando una nueva manera de encontrarnos con el café, la gastronomía y el Atlántico.</p>
-          <a className="button button-outline" href="mailto:hola@piazzadimare.com.ar">Quiero saber más <ArrowRight size={18} /></a>
+      <section className="moment">
+        <div className="moment-image" />
+        <div className="moment-copy">
+          <p className="eyebrow">Desayunos, meriendas y atardeceres</p>
+          <h2>Cada momento<br />tiene su sabor.</h2>
+          <p>
+            Desde un desayuno frente al mar hasta una copa cuando baja el sol,
+            Piazza di Mare siempre invita a quedarse un poco más.
+          </p>
+          <a className="cta gold" href="#contacto">Reservá tu mesa <ArrowRight size={17} /></a>
         </div>
       </section>
 
-      <footer id="contacto">
+      <section className="contact" id="contacto">
+        <div>
+          <p className="eyebrow light">Contacto</p>
+          <h2>Te esperamos<br />en la costa.</h2>
+        </div>
+        <div className="contact-data">
+          <span><MapPin size={18} /> Mar del Plata, Buenos Aires</span>
+          <span><Clock3 size={18} /> Próximamente</span>
+          <span><Coffee size={18} /> Café · Pastelería · Gastronomía</span>
+          <span><Wine size={18} /> Desayunos · Meriendas · Atardeceres</span>
+        </div>
+        <a className="cta gold" href="mailto:hola@piazzadimare.com.ar">Quiero saber más <ArrowRight size={17} /></a>
+      </section>
+
+      <footer>
         <div className="footer-brand">
-          <span className="brand-mark"><Waves size={22} strokeWidth={1.5} /></span>
-          <span><strong>Piazza</strong><small>di Mare</small></span>
+          <strong>Piazza di Mare</strong>
+          <small>Confitería · Café · Mar del Plata</small>
         </div>
-        <div className="footer-meta">
-          <span>Mar del Plata · Buenos Aires · Argentina</span>
-          <span>hola@piazzadimare.com.ar</span>
-        </div>
-        <a className="social" href="#" aria-label="Instagram"><Instagram size={20} /></a>
+        <span>Mar del Plata siempre es una buena idea.</span>
+        <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
       </footer>
     </main>
   );
