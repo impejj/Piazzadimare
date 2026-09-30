@@ -173,6 +173,24 @@ export default function App() {
         </div>
       </section>
 
+      <section className="events" id="eventos">
+        <div className="events-overlay" />
+        <div className="events-copy">
+          <p className="eyebrow light">Encuentros & eventos</p>
+          <h2>Un escenario para<br />momentos especiales.</h2>
+          <p>
+            Celebraciones íntimas, encuentros corporativos, presentaciones de marca y experiencias
+            privadas con el Atlántico como telón de fondo.
+          </p>
+          <div className="event-tags">
+            <span><CalendarDays size={17} /> Eventos privados</span>
+            <span><Users size={17} /> Encuentros & grupos</span>
+            <span><Wine size={17} /> Atardeceres especiales</span>
+          </div>
+          <a className="cta outline-light" href="#contacto">Consultar experiencias <ArrowRight size={17} /></a>
+        </div>
+      </section>
+
       <section className="contact" id="contacto">
         <div>
           <p className="eyebrow light">Contacto</p>
