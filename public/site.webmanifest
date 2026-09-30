@@ -1,0 +1,10 @@
+{
+  "name": "Piazza di Mare",
+  "short_name": "Piazza di Mare",
+  "description": "Confitería, café y gastronomía frente al mar en Mar del Plata.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061f33",
+  "theme_color": "#061f33",
+  "lang": "es-AR"
+}
