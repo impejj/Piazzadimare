@@ -1,2 +1,4 @@
 const button=document.getElementById('menuButton');const nav=document.getElementById('nav');button?.addEventListener('click',()=>nav?.classList.toggle('nav-open'));nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('nav-open')));
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('main>section:not(.hero)').forEach(el=>{el.classList.add('reveal');io.observe(el)});}
+
+const hdr=document.querySelector('.site-header');const onScroll=()=>hdr?.classList.toggle('scrolled',window.scrollY>40);window.addEventListener('scroll',onScroll,{passive:true});onScroll();
