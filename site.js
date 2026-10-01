@@ -2,3 +2,5 @@ const button=document.getElementById('menuButton');const nav=document.getElement
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('main>section:not(.hero)').forEach(el=>{el.classList.add('reveal');io.observe(el)});}
 
 const hdr=document.querySelector('.site-header');const onScroll=()=>hdr?.classList.toggle('scrolled',window.scrollY>40);window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+const navLinks=[...document.querySelectorAll('.nav a[href^="#"]')];const sections=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);if('IntersectionObserver'in window){const nio=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>nio.observe(s));}

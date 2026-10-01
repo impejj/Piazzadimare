@@ -186,3 +186,14 @@ img{max-width:100%;height:auto}
 .cta,.reserve-pill,.nav a{cursor:pointer}
 @media(max-width:900px){.signature-head{grid-template-columns:1fr;gap:18px}.signature-grid{grid-template-columns:1fr}.signature-grid article{border-right:0;border-bottom:1px solid #cabfaa;min-height:0}.signature-grid article:last-child{border-bottom:0}}
 @media(max-width:680px){.signature{padding:78px 20px}.signature-grid article{padding:30px 0}.signature-mark{margin-bottom:24px}.signature-grid h3{font-size:30px}.wave-divider{padding:14px 20px}}
+
+/* Navigation state + micro-motion v18 */
+.nav a{position:relative;padding-bottom:5px}
+.nav a:after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:#dfb56d;transition:right .25s ease}
+.nav a:hover:after,.nav a.active:after{right:0}
+.nav a.active{color:#dfb56d}
+.hero-content .eyebrow,.hero-content h1,.hero-content .hero-tagline,.hero-content .cta{animation:heroIn .8s both}
+.hero-content h1{animation-delay:.08s}.hero-content .hero-tagline{animation-delay:.16s}.hero-content .cta{animation-delay:.24s}
+@keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-content .eyebrow,.hero-content h1,.hero-content .hero-tagline,.hero-content .cta{animation:none}}
+@media(max-width:680px){.finale-copy{max-width:100%}.finale-actions .cta{width:auto;max-width:100%}.project-note-copy p,.signature-head>p{font-size:15px}.launch-ribbon{box-shadow:0 6px 20px rgba(0,0,0,.2)}}
