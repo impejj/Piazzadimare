@@ -17,3 +17,40 @@ footer{background:#051827;color:#dbe4e8;border-top:1px solid #183349;padding:26p
 .nav a,.reserve-pill,.cta{transition:opacity .2s ease,transform .2s ease,background .2s ease}.nav a:hover{opacity:1}.cta:hover,.reserve-pill:hover{transform:translateY(-2px)}
 
 @media(max-width:680px){.brand{width:145px;height:62px}.footer-brand{width:135px;height:68px}}
+
+/* Mobile hardening v9 */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+main,section,header,footer{max-width:100%}
+img{max-width:100%;height:auto}
+@media(max-width:680px){
+  html,body,main{width:100%;min-width:0;overflow-x:hidden}
+  .site-header{width:100%;padding:16px 18px;grid-template-columns:minmax(0,1fr) auto;gap:12px}
+  .brand{width:118px;height:62px;overflow:hidden}
+  .brand img{width:118px!important;max-width:118px!important;height:62px!important;object-fit:contain!important}
+  .menu-button{font-size:0;width:40px;height:40px;position:relative}
+  .menu-button:after{content:'☰';font-size:24px;color:white;position:absolute;inset:0;display:grid;place-items:center}
+  .hero{width:100%;min-height:100svh}
+  .hero-bg{width:100%;height:100%;object-fit:cover;object-position:62% center}
+  .hero-content{width:100%;max-width:none;padding:150px 20px 70px}
+  .hero h1{font-size:clamp(52px,15vw,72px);line-height:.92;max-width:92vw}
+  .hero-tagline{font-size:15px;line-height:1.5;max-width:88vw}
+  .hero-location{left:20px;bottom:20px;font-size:8px}
+  .experience-section,.proposal,.architecture,.moment,.contact{width:100%;display:grid;grid-template-columns:1fr;min-width:0}
+  .experience-section,.proposal{padding:64px 20px}
+  .experience-intro,.proposal-copy,.architecture-copy,.moment-copy,.events-copy{min-width:0;width:100%}
+  .experience-intro h2,.proposal h2,.architecture-copy h2,.moment-copy h2,.events-copy h2,.contact h2{font-size:clamp(42px,12vw,58px);line-height:.98}
+  .experience-cards{width:100%;grid-template-columns:1fr;gap:14px}
+  .experience-card{display:grid;grid-template-columns:42% 58%;width:100%;min-width:0}
+  .experience-card img{width:100%;height:100%;min-height:190px;object-fit:cover}
+  .menu-grid{width:100%;grid-template-columns:1fr 1fr;gap:10px}
+  .menu-card{min-width:0}
+  .architecture-photo,.moment-image{width:100%;min-height:360px}
+  .features{grid-template-columns:1fr;gap:16px}
+  .events{width:100%;min-height:520px}
+  .event-tags{flex-direction:column;align-items:flex-start}
+  .contact{padding:56px 20px;gap:28px}
+  .contact-data{grid-template-columns:1fr}
+  footer{width:100%;padding:24px 20px;grid-template-columns:1fr auto}
+  .footer-brand{width:120px;height:70px}
+  .footer-brand img{width:120px!important;max-width:120px!important;height:70px!important;object-fit:contain!important}
+}
