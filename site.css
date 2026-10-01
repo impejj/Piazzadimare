@@ -140,3 +140,9 @@ img{max-width:100%;height:auto}
 .site-header.scrolled{position:fixed;background:rgba(5,24,39,.78);backdrop-filter:blur(16px);border-color:rgba(255,255,255,.08);padding-top:15px;padding-bottom:15px}
 @media(max-width:900px){.gallery-head{display:block}.gallery-head .eyebrow{margin-bottom:16px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:420px 250px 250px;min-height:0}.gallery-main{grid-column:1/3;grid-row:1}.gallery-grid figure:last-child{grid-column:1/3}.finale{min-height:620px}}
 @media(max-width:680px){.visual-gallery{padding:76px 20px}.gallery-grid{display:grid;grid-template-columns:1fr;grid-template-rows:none;gap:10px}.gallery-main,.gallery-grid figure:last-child{grid-column:auto;grid-row:auto}.gallery-grid figure{height:260px}.gallery-grid .gallery-main{height:390px}.gallery-head h2{font-size:clamp(42px,12vw,56px)}.finale{min-height:620px}.finale-copy{padding:72px 20px}.finale-copy h2{font-size:clamp(52px,14vw,68px)}.finale-actions{flex-direction:column;align-items:flex-start}}
+
+/* Copy polish v14 */
+.hero-tagline{max-width:600px}
+.reserve-pill{background:rgba(6,31,51,.16);backdrop-filter:blur(6px)}
+.contact-data span{line-height:1.45}
+@media(max-width:680px){.hero-tagline{max-width:90vw}.reserve-pill{display:none}}
