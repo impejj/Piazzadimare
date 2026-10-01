@@ -110,3 +110,10 @@ img{max-width:100%;height:auto}
 .experience-card:hover img,.menu-card:hover img{transform:scale(1.035);filter:saturate(1.04) contrast(1.02)}
 .architecture-photo,.moment-image,.events{background-attachment:scroll}
 @media(min-width:1100px){.architecture-photo,.moment-image{background-size:cover}.hero-bg{object-position:center 54%}}
+
+/* Header cleanup v12: hero already carries the brand */
+.site-header{grid-template-columns:1fr auto}
+.brand{display:none!important}
+.nav{justify-self:start}
+@media(max-width:1000px){.site-header{grid-template-columns:1fr auto}.nav{justify-self:start}}
+@media(max-width:680px){.site-header{grid-template-columns:1fr auto}.menu-button{grid-column:2;justify-self:end}}
